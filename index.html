@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multa</title>
+
+    <style>
+
+body{
+    background-color: orange;
+    font: 25pt Arial;
+}
+
+input#button{
+width: 200px;
+height: 50px;
+}
+
+    </style>
+</head>
+<body>
+    
+<H1>Sistema da Polícia de Rockport</H1>
+
+<h2>Sistema de rastreamento</h2>
+<strong>Veículo do suspeito:</strong> <input id="vs"  type="text"> <input type="button" value="registrar" onclick="salvar()">
+<br>
+<strong>Velocidade:</strong> <input type="number" name="resg" id="resg"> <input type="button" value="registrar" onclick="calcular()">
+<br>
+<hr>
+<p></p>
+
+<p id="vst"></p>
+<p id="vl"></p>
+<p id="mw"></p>
+
+
+<script>
+
+//var vel = document.querySelector('input#resg')
+//var num = Number(vel.value)
+
+
+function salvar(){
+    var ves = document.querySelector('input#vs')
+    var mostrar = document.getElementById('vst')
+    var vel = document.querySelector('input#resg')
+    var num = Number(vel.value)
+    var mw = document.querySelector('p#mw')
+
+
+    if(ves.value == 'bmw m3 gtr' && num >= 370){
+    mostrar.innerHTML = `<strong>Veículo do suspeito:</strong> ${ves.value.toUpperCase()}`
+    most.innerHTML = `<strong>Velocidade: </strong> ${num}km/h`
+    mw.innerHTML = `<strong>The Most Wanted </strong>` 
+}
+
+ else{    mostrar.innerHTML = `<strong>Veículo do suspeito:</strong> ${ves.value.toUpperCase()}`
+ }
+}
+
+function calcular(){
+    var vel = document.querySelector('input#resg')
+    var num = Number(vel.value)
+    var ves = document.querySelector('input#vs')
+    var mostrar = document.getElementById('vst')
+    var most = document.querySelector('p#vl')
+    var mw = document.querySelector('p#mw')
+
+
+
+
+    if(ves.value == 'bmw m3 gtr' && num >= 370){
+        mostrar.innerHTML = `<strong>Veículo do suspeito:</strong> ${ves.value.toUpperCase()}`
+    most.innerHTML = `<strong>Velocidade: </strong> ${num}km/h`
+    mw.innerHTML = `<strong>The Most Wanted </strong>`
+    }
+
+ else{    most.innerHTML = `<strong>Velocidade: </strong> ${num}km/h`
+ }
+}
+
+</script>
+
+
+
+</body>
+</html>
